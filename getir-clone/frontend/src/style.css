@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+@theme {
+    --color-primary: #5d3ebc; 
+    --color-secondary: #7849f7;
+    
+  }
+
+  @layer base{
+    
+    html,body {
+        font-family: "Open Sans", sans-serif;
+        @apply antialiased bg-gray-50;
+    }
+  }
+
+.flag-select {
+    @apply !pb-0
+}
+.flag-select button {
+    @apply h-14 border-2 border-gray-200 transition-colors bg-white rounded hover:border-primary
+}
+.flag-select button >span span:nth-child(2) {
+    @apply text-sm pl-2
+}
+.bg-mobile-app {
+	background-image: url('https://cdn.getir.com/getirweb-images/common/illustration/doodle.png');
+
+}
