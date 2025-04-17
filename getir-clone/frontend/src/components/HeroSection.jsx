@@ -14,7 +14,7 @@ const HeroSection = () => {
   return (
     <div className="w-full h-[500px] bg-secondary">
 
-      <div className=" md:container flex justify-between items-center relative md:absolute top-0 left-0 md:left-1/2 translate-x-0 md:-translate-x-1/2 h-full z-20">
+      <div className=" md:container flex justify-between items-center relative md:absolute top-0 left-0 md:left-1/2 translate-x-0 md:-translate-x-1/2 h-full z-10">
         <div className="hidden md:block">
           <img
             src="https://getir.com/_next/static/images/bimutluluk-b3a7fcb14fc9a9c09b60d7dc9b1b8fd6.svg"
