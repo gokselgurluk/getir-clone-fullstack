@@ -5,12 +5,16 @@
     --color-primary: #5d3ebc; 
     --color-secondary: #7849f7;
     --color-gray-storm: #697488;
+    --color-gray: #a2a2a2;
+    --color-gray-background: #fafafa;
     --color-black: #191919;
     --color-header:#4c3398;
+    --color-border:#dfdee2;
+    --color-white: #fff;
+    --color-primary-light: #f3f0fe;
     --color-gray-list-item:rgb(105, 116, 136);
-    --font-weight-semi-bold: 600;
-    
     --shadow-card: rgba(93, 62, 188, 0.04);
+    
     --font-weight-normal: 400;
   }
 
