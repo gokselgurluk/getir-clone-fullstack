@@ -43,3 +43,7 @@
 	background-image: url('https://cdn.getir.com/getirweb-images/common/partners-background.jpg');
 
 }
+.bg-getirbuyuklogo {
+	background-image: url('../src/images/getirbuyuklogo.svg');
+
+}

@@ -13,7 +13,7 @@ const logoClass = (path) =>
     !isActive(path) ? "filter grayscale brightness-115 contrast-90" : ""
   }`;
   return (
-    <div className="bg-header block fixed z-30 w-full ">
+    <div className="bg-header block fixed z-30 w-full  ">
       <div className="container  mx-auto  h-11 flex items-center justify-between overflow-hidden" >
         <nav className=" mt-[10px] my-0.2 flex justify-center items-center ">
           <Link to="/" className="px-5 py-4  hover:bg-secondary rounded-t-lg  cursor-pointer  ">
