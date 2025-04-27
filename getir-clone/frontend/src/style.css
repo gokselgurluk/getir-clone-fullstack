@@ -43,7 +43,14 @@
 	background-image: url('https://cdn.getir.com/getirweb-images/common/partners-background.jpg');
 
 }
+.bg-business {
+	background-image: url('https://cdn.getir.com/getirweb-images/common/partners-background.jpg');
+
+}
 .bg-getirbuyuklogo {
 	background-image: url('../src/images/getirbuyuklogo.svg');
+
+}.bg-getircarsi {
+	background-image: url("https://cdn.getir.com/getirweb_images/common/hero_posters/locals_2.jpeg");
 
 }
