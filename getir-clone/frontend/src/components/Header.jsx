@@ -3,10 +3,14 @@ import { HiUser, HiUserPlus } from "react-icons/hi2";
 import { Link,useLocation  } from 'react-router-dom';
 import { useState } from "react";
 import LoginModal from "@/components/LoginModal";
+import RegisterModal from "@/components/RegisterModal";
+import LanguageModal from "@/components/LanguageModal";
 const Header = () => {
 
 const location = useLocation();
-const [isModalOpen, setIsModalOpen]=useState(false)
+const [isLoginModalOpen, setIsLoginModalOpen]=useState(false)
+const [isRegisterModalOpen, setIsRegisterModalOpen]=useState(false)
+const [isLanguageModalOpen, setIsLAnguageModalOpen]=useState(false)
 const isActive =(path) => location.pathname == path
 
 const logoClass = (path) =>
@@ -53,20 +57,29 @@ const logoClass = (path) =>
         <nav className="flex gap-x-8 text-sm font-medium">
 
           <a href="#" className="flex items-center gap-x-2 text-white transition-all opacity-80 hover:opacity-100 ">
-            <BiGlobe size={18} /> Türkçe(TR)
+          <BiGlobe size={18} /> 
+          <buttona className="cursor-pointer" onClick={()=> setIsLAnguageModalOpen(true)} >Türkçe(TR)</buttona>
+            <LanguageModal
+            isOpen={isLanguageModalOpen}
+            onClose={() => setIsLAnguageModalOpen(false)}
+            />
           </a>
           <a href="#" className="flex items-center  gap-x-2 text-white transition-all opacity-80 hover:opacity-100 ">
             <HiUser size={18} />
-            <button className="cursor-pointer" onClick={()=>setIsModalOpen(true)}>Giriş Yap</button>
+            <button className="cursor-pointer" onClick={()=>setIsLoginModalOpen(true)}>Giriş Yap</button>
             <LoginModal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
+          isOpen={isLoginModalOpen}
+          onClose={() => setIsLoginModalOpen(false)}
       />
           </a>
-          <Link to="/register" className="flex items-center gap-x-2 text-white transition-all opacity-80 hover:opacity-100 ">
+          <a href="#"  className="flex items-center gap-x-2 text-white transition-all opacity-80 hover:opacity-100 ">
             <HiUserPlus size={18} />
-            Kayıt Ol
-          </Link>
+            <button className="cursor-pointer" onClick={()=>setIsRegisterModalOpen(true)}>Kayıt Ol</button>
+          <RegisterModal
+          isOpen={isRegisterModalOpen}
+          onClose={()=> setIsRegisterModalOpen(false)}
+          />
+            </a>
         </nav>
       </div>
      
