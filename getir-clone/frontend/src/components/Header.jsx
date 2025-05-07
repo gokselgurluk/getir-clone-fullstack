@@ -2,15 +2,17 @@ import { BiGlobe } from "react-icons/bi";
 import { HiUser, HiUserPlus } from "react-icons/hi2";
 import { Link,useLocation  } from 'react-router-dom';
 import { useState } from "react";
-import LoginModal from "@/components/LoginModal";
-import RegisterModal from "@/components/RegisterModal";
-import LanguageModal from "@/components/LanguageModal";
+import LoginModal from "@/components/Modal/LoginModal";
+import RegisterModal from "@/components/Modal/RegisterModal";
+import LanguageModal from "@/components/Modal/LanguageModal";
 const Header = () => {
 
 const location = useLocation();
-const [isLoginModalOpen, setIsLoginModalOpen]=useState(false)
-const [isRegisterModalOpen, setIsRegisterModalOpen]=useState(false)
-const [isLanguageModalOpen, setIsLAnguageModalOpen]=useState(false)
+const [activeModal, setActiveModal] = useState(null); 
+const openLogin = () => setActiveModal("login");
+const openRegister = () => setActiveModal("register");
+const openLanguage = () => setActiveModal("language");
+const closeModal = () => setActiveModal(null);
 const isActive =(path) => location.pathname == path
 
 const logoClass = (path) =>
@@ -58,27 +60,30 @@ const logoClass = (path) =>
 
           <a href="#" className="flex items-center gap-x-2 text-white transition-all opacity-80 hover:opacity-100 ">
           <BiGlobe size={18} /> 
-          <buttona className="cursor-pointer" onClick={()=> setIsLAnguageModalOpen(true)} >Türkçe(TR)</buttona>
+          <button className="cursor-pointer" onClick={openLanguage} >Türkçe(TR)</button>
             <LanguageModal
-            isOpen={isLanguageModalOpen}
-            onClose={() => setIsLAnguageModalOpen(false)}
+            isOpen={activeModal === "language"}
+            onClose={closeModal}
             />
           </a>
           <a href="#" className="flex items-center  gap-x-2 text-white transition-all opacity-80 hover:opacity-100 ">
             <HiUser size={18} />
-            <button className="cursor-pointer" onClick={()=>setIsLoginModalOpen(true)}>Giriş Yap</button>
+            <button className="cursor-pointer" onClick={openLogin}>Giriş Yap</button>
             <LoginModal
-          isOpen={isLoginModalOpen}
-          onClose={() => setIsLoginModalOpen(false)}
+         isOpen={activeModal === "login"}
+         onClose={closeModal}
+         onRegisterClick={openRegister} // 🔥 Bu çok önemli
       />
           </a>
           <a href="#"  className="flex items-center gap-x-2 text-white transition-all opacity-80 hover:opacity-100 ">
             <HiUserPlus size={18} />
-            <button className="cursor-pointer" onClick={()=>setIsRegisterModalOpen(true)}>Kayıt Ol</button>
+            <button className="cursor-pointer" onClick={openRegister}>Kayıt Ol</button>
           <RegisterModal
-          isOpen={isRegisterModalOpen}
-          onClose={()=> setIsRegisterModalOpen(false)}
-          />
+  isOpen={activeModal === "register"}
+  onClose={closeModal}
+  onLoginClick={openLogin} // Bu çok önemli
+      />
+         
             </a>
         </nav>
       </div>
