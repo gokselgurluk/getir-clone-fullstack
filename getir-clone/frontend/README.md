@@ -115,7 +115,7 @@ Lütfen bu projenin `davranış kurallarına` uyun.
   
 ## Ekran Görüntüleri
 
-![Uygulama Ekran Görüntüsü](./assets/demo.gif)
+![Uygulama Ekran Görüntüsü](./src/assets/demo.gif)
 
   
 ## Geri Bildirim
