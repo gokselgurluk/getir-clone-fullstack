@@ -118,5 +118,5 @@ Katkılara her zaman açığız!
 
 Herhangi bir geri bildiriminiz varsa, lütfen gurlukgoksel@gmail.com adresinden bana ulaşın.
 
-  
-[![Canlı Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://getir.clone.proje.shop)
+## 🌐 Canlı Demo
+🔗[![Canlı Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://getir.clone.proje.shop)
