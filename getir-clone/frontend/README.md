@@ -95,10 +95,6 @@ Sunucuyu çalıştırın
 
 Katkılara her zaman açığız!
 
-Başlamak `Contributor.md'ye bakın.
-
-Lütfen bu projenin `davranış kurallarına` uyun.
-
   
 ## Yazarlar ve Teşekkür
 
@@ -123,3 +119,4 @@ Lütfen bu projenin `davranış kurallarına` uyun.
 Herhangi bir geri bildiriminiz varsa, lütfen gurlukgoksel@gmail.com adresinden bana ulaşın.
 
   
+[![Canlı Demo](https://img.shields.io/badge/demo-online-brightgreen)](https://getir.clone.proje.shop)
